@@ -29,7 +29,7 @@ const Register = () => {
                     </div>
 
                     <div>
-                        <span className="fs9 w7 mt4 ml4 text-uppercase ">Vous avez un project, une question?</span>
+                        <span className="fs9 w7 mt4 ml4 text-uppercase ">Vous avez un project, une question? to be changed to eng</span>
                     </div>
                     <div className="mt4 flex space-between p4">
                         <div className="w50">
