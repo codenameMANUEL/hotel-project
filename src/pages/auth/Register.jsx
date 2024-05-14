@@ -1,22 +1,31 @@
 import { useState } from 'react';
 import '../auth/auth.css'
+import { Link } from 'react-router-dom';
 
 const Register = () => {
- 
-    
     const [record, setRecord] = useState({
-        first_nanme:"",
-        last_nanme:"",
-        email:"",
-        phone_number:"",
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone_number: "",
+        password: "",
     })
 
-
     const handleRegisterEvent = (e) => {
-        let {value,name} = e.target;
-        console.log(name)
-        setRecord({...record,[name]:value});
+        let { value, name } = e.target;
+        setRecord({ ...record, [name]: value });
     }
+
+    const saveRegisteredUsers = () => {
+        if(localStorage.getItem("savedUsers")){
+            let userRegistry = JSON.parse(localStorage.getItem("savedUsers"))
+            userRegistry.push(record)
+            localStorage.setItem("savedUsers", JSON.stringify(userRegistry))
+        }else{
+            localStorage.setItem("savedUsers", JSON.stringify([record]))
+        }
+    }
+
 
 
     return (
@@ -29,7 +38,7 @@ const Register = () => {
                     </div>
 
                     <div>
-                        <span className="fs9 w7 mt4 ml4 text-uppercase ">Vous avez un project, une question? to be changed to eng</span>
+                        <span className="fs9 w7 mt4 ml4 text-uppercase ">New here? Sign up now to get started!</span>
                     </div>
                     <div className="mt4 flex space-between p4">
                         <div className="w50">
@@ -55,7 +64,6 @@ const Register = () => {
                                         onChange={handleRegisterEvent}
                                     />
                                 </div>
-
                             </div>
                             <div className="mt4">
                                 <div>
@@ -64,6 +72,16 @@ const Register = () => {
                                 <input className="input-box"
                                     name="email"
                                     value={record.email}
+                                    onChange={handleRegisterEvent}
+                                />
+                            </div>
+                            <div className="mt4">
+                                <div>
+                                    <label className="label-text">Password</label>
+                                </div>
+                                <input className="input-box"
+                                    name="password"
+                                    value={record.password}
                                     onChange={handleRegisterEvent}
                                 />
                             </div>
@@ -78,8 +96,16 @@ const Register = () => {
                                 />
                             </div>
                             <div className="mt4">
-                                <button className='btn_register'>REGISTER</button>
+                                <button
+                                    className='btn_register'
+                                    onClick={saveRegisteredUsers}
+                                >
+                                    REGISTER
+                                </button>
                             </div>
+                            <div className='mt4'>
+                        <p>Already have an account? <Link className='links' to="/login">Login</Link> </p>
+                    </div>
                         </div>
                     </div>
 

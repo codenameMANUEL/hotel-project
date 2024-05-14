@@ -43,7 +43,7 @@ body {
 }
 
 .fs9 {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .w80 {
@@ -72,7 +72,7 @@ body {
 }
 
 .p4 {
-  padding: 4em;
+  padding: 2em;
 }
 
 .ml4 {
@@ -138,4 +138,11 @@ body {
   padding: 10px 25px;
   border: none;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
