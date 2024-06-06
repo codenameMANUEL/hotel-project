@@ -1,14 +1,18 @@
 import { Route, Routes } from 'react-router-dom'
-import Banner from "./pages/Banner.jsx";
-import Register from './pages/auth/Register.jsx';
-import Login from './pages/auth/Login.jsx';
+import FrontPage from "./pages/Homepage/FrontPage.jsx";
+import Register from './pages/AuthForm/Register.jsx';
+import Login from './pages/AuthForm/Login.jsx';
+import BookingFooter from './pages/Homepage/BookinFooter.jsx';
+import UserProfile from './pages/UserAccount/index.jsx';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Banner/>}/>
+      <Route path="/" element={<FrontPage/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/booking" element={<BookingFooter/>}/>
+      <Route path="/profile" element={<UserProfile/>}/>
     </Routes>
   )
 }

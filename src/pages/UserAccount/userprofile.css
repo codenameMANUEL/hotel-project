@@ -1,0 +1,120 @@
+/* SIDE BAR  */
+
+.sidebar_container {
+    background-color: #ffff;
+    width: 230px;
+    /* margin-right: 30px; */
+    height: 100vh;
+    position: fixed;
+    font-size: 14px;
+    color: #ffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #0C1C44;
+}
+.sidebar_container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    background-color: #0C1C44;
+    color: #ffff;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+.sidebar_container ul li {
+    text-align: center;
+    margin: 40px 0px;
+    color: #BCBCBB;
+    cursor: pointer;
+}
+.sidebar_container ul li:focus {
+    color: #0C1C44;
+}
+
+
+/* MAIN CONTENT  */
+.layout-wrapper {
+    display: flex;
+    background-color: #e5e3e3;
+}
+
+.main_content_layout {
+    margin-left: 240px;
+    width: 83%;
+}
+
+/* USER PROFILE NAV  */
+.user_profile_nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 250px; */
+    background-color: #ffff;
+    height: 25px;
+    border-radius: 5px 0px 0px 5px;
+}
+.welcome {
+    font-size: 18px;
+    font-weight: 500;
+}
+.search_container {
+    position: relative;
+    width: 350px; 
+}
+.search_container input[type="search"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    font-size: 16px;
+    outline: none;
+}
+.search_container .search_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the icon doesn't block the input */
+    color: #ccc;
+}
+.search_container input[type="search"]:focus {
+    border-color: #1741ab; /* Change border color on focus */
+    outline: 1px solid #1741ab; /* Add custom outline color */
+}
+.right_nav {
+    display: flex;
+    align-items: center;
+}
+.mail_icon {
+    margin-right: 25px;
+    width: 15px;
+    cursor: pointer;
+}
+.divider {
+    width: 1px;
+    height: 30px;
+    background-color: #ccc; 
+    margin-right: 25px; 
+}
+
+.profile_container {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.profile_container img {
+    border-radius: 50%;
+    width:30px; 
+    height: 30px; 
+}

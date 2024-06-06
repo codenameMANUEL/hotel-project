@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import '../auth/auth.css'
-import { Link } from 'react-router-dom';
+import './auth.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [record, setRecord] = useState({
@@ -10,6 +10,7 @@ const Register = () => {
         phone_number: "",
         password: "",
     })
+    const loginNavigate = useNavigate()
 
     const handleRegisterEvent = (e) => {
         let { value, name } = e.target;
@@ -21,8 +22,10 @@ const Register = () => {
             let userRegistry = JSON.parse(localStorage.getItem("savedUsers"))
             userRegistry.push(record)
             localStorage.setItem("savedUsers", JSON.stringify(userRegistry))
+            loginNavigate("/login")
         }else{
             localStorage.setItem("savedUsers", JSON.stringify([record]))
+            loginNavigate("/login")
         }
     }
 

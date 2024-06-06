@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import '../auth/auth.css';
+import './auth.css';
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -24,7 +24,7 @@ const Login = () => {
             record.forEach(userData => {
                 if (email === userData.email && password === userData.password) {
                     localStorage.setItem("userloginData", JSON.stringify(userData))
-                    navigate("/")
+                    navigate("/profile")
                 }
             });
         }
@@ -60,6 +60,7 @@ const Login = () => {
                                 </div>
                                 <input className="input-box"
                                     name="password"
+                                    type='password'
                                 // value=""
                                 onChange={handleLogin}
                                 />

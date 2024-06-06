@@ -1,17 +1,18 @@
+import '../Homepage/frontpageNav.css';
+import "../Homepage/contentbody.css"
 import { AlignLeft, Tally1  } from 'lucide-react';
-import '../pages/banner.css'
-import video from "../assets/welcome_video.mp4"
-import './contentbody.css';
-import imageOne from '../assets/row1_imgOne.jpeg';
-import pool from '../assets/pool.jpeg';
-import wine from '../assets/wine.webp'
-import spa from '../assets/spa.webp'
-import spaCare from '../assets/spaCare.webp'
-import twoPlate from '../assets/twoPlate.webp'
-import sihoutte from '../assets/sihoutte.webp'
-import poolview from '../assets/poolView.jpeg'
+import video from "../../assets/welcome_video.mp4"
+import imageOne from '../../assets/row1_imgOne.jpeg';
+import pool from '../../assets/pool.jpeg';
+import wine from '../../assets/wine.webp'
+import spa from '../../assets/spa.webp'
+import spaCare from '../../assets/spaCare.webp'
+import twoPlate from '../../assets/twoPlate.webp'
+import sihoutte from '../../assets/sihoutte.webp'
+import poolview from '../../assets/poolView.jpeg'
+import BookingFooter from '../Homepage/BookinFooter';
 
-const Banner = () => {
+const FrontPage = () => {
     return (
         <>
             <div className="home">
@@ -111,8 +112,9 @@ const Banner = () => {
                 </div>
             </div>
         </div>
+        <BookingFooter/>
         </>
     );
 };
 
-export default Banner;
+export default FrontPage;
